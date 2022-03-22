@@ -1,0 +1,14 @@
+- const zoomLink = "https://us02web.zoom.us/j/7880117551";
+
+mixin showcase()
+  section.main__showcase.showcase
+    .container.showcase__container
+      p.showcase__organization <b>Высшая школа перевода (факультет) <br> МГУ имени М.В. Ломоносова</b>
+      p.showcase__date <b>20 марта 2022 <br> воскресенье</b>
+      h1.showcase__title Виртуальный <br>день открытых дверей
+      .showcase__links-container
+        a.showcase__link(href="#enroll") Записаться
+          span.showcase__link-exp Займёт меньше минуты
+        a.showcase__link(href=zoomLink target="_blank") Поключиться к Zoom
+          span.showcase__link-exp Начнём в #{beginAt}
+

@@ -1,0 +1,15 @@
+extends ../components/base/layout
+
+block variables
+  - const title = "День открытых дверей"
+  - const beginAt = "14:00"
+
+block main
+  main.main
+    +showcase()
+    +about()
+    +points()
+    +speakers()
+    +events()
+    +testing()
+    +enroll()
