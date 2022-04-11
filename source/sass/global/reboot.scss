@@ -1,7 +1,9 @@
 *,
 *::before,
 *::after {
-  box-sizing: border-box;
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
 }
 
 html,
@@ -11,12 +13,9 @@ body {
 }
 
 html {
-  font-style: normal;
-  font-weight: 400;
-  font-size: $fz-default;
-  line-height: 24px;
-  font-family: $ff-default;
-  color: $color-default-black;
+  box-sizing: border-box;
+  font-size: 62.5%;
+
 
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -24,23 +23,30 @@ html {
   text-rendering: optimizeLegibility;
   // если по прежнему есть проблемы с выравниванием
   // https://transfonter.org/ - включите настройку https://prnt.sc/12rnt6g и переконвертируйте шрифт
-
-  @include desktop {
-    font-size: $fz-default-desktop;
-    line-height: 25px;
-  }
 }
 
 body {
   width: 100%;
-  height: 100%;
-
-  background-color: $color-default-white;
+  min-height: 100vh;
+  font-style: normal;
+  font-weight: 400;
+  font-family: $ff-primary;
+  line-height: 1.6;
+  color: $color-grey-dark;
+  background-color: $color-white;
 }
 
 a {
-  color: $color-default-black;
   text-decoration: none;
+}
+
+a:link,
+a:visited {
+  color: $color-primary;
+}
+
+a:hover {
+  text-decoration: underline;
 }
 
 img,
@@ -61,9 +67,9 @@ textarea {
 // если в стилях уже используется box-shadow есть другое решение -
 // задать к списку транзишенов `background-color 10000000s ease-out`
 input:-webkit-autofill {
-  box-shadow: inset 0 0 0 1000px $color-default-white;
+  box-shadow: inset 0 0 0 1000px $color-white;
 
-  -webkit-text-fill-color: $color-default-black;
+  -webkit-text-fill-color: $color-black;
 }
 
 // firefox placeholder \ invalid fix + ios bdrs

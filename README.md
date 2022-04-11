@@ -1,2 +1,2 @@
-# esti-openday
-landing page of openday event
+# esti-pk
+esti.msu.ru admissions departament page

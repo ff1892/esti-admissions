@@ -1,8 +1,23 @@
+-
+  const headerLinks = [
+    {label: "Общая информация", href: "#hi"},
+    {label: "Объявления", href: "#"},
+    {label: "Результаты экзаменов", href: "#"},
+    {label: "Контакты", href: "#"}
+  ]
+
+  const langLinks = [
+    {label: 'en', href: "#en"},
+    {label: '中文', href: "#ch"}
+  ]
+
 mixin header()
-  header.header.page__header
-    .container.header__container
-      a.header__home(href="/") На главную
-      nav.header__nav
-        a.header__nav-link(href="#about") О мероприятии
-        a.header__nav-link(href="#program") Программа
-        a.header__nav-link(href="#testing") Тестирование
+  header.header
+    .header__logo
+      p Logo
+    .header__nav
+      each link in headerLinks
+        a.header__nav-link(href= link.href)= link.label
+    .header__lang
+      each link in langLinks
+        a.header__lang-link(href= link.href)= link.label
