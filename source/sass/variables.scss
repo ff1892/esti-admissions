@@ -13,6 +13,10 @@ $color-transparent: rgba(255, 255, 255, 0);
 $color-primary-dark: #e03c51;
 $color-primary: #dc504f;
 
+
+$color-grey-light: #faf9f9;
+$color-grey-light-1: #fefefe;
+
 $color-grey-dark: #2c2c2c;
 
 
@@ -20,4 +24,8 @@ $color-grey-dark: #2c2c2c;
 $mobile: 430px;
 $tablet: 768px;
 $desktop: 960px;
+
+// gradients
+
+$gradient-dark: linear-gradient(to bottom, $color-grey-light-1, $color-transparent);
 

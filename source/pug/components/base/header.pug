@@ -13,11 +13,13 @@
 
 mixin header()
   header.header
-    .header__logo
-      p Logo
-    .header__nav
-      each link in headerLinks
-        a.header__nav-link(href= link.href)= link.label
-    .header__lang
-      each link in langLinks
-        a.header__lang-link(href= link.href)= link.label
+    .container.header__container
+      .header__logo
+        a.header__logo-link(href="/")
+          img.header__logo-img(width="80" height="50" src="img/logo.svg")
+      .header__nav
+        each link in headerLinks
+          a.header__nav-link(href= link.href)= link.label
+      .header__lang
+        each link in langLinks
+          a.header__lang-link(href= link.href)= link.label

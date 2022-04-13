@@ -1,0 +1,15 @@
+.hero {
+  background-image: $gradient-dark;
+
+  &__container {
+    padding: 7rem 8rem;
+    display: grid;
+    grid-template-columns: max-content 1fr;
+  }
+
+  &__title {
+    font-size: 3.2rem;
+    line-height: 1.5;
+    font-weight: 400;
+  }
+}

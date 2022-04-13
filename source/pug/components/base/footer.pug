@@ -1,4 +1,34 @@
 mixin footer()
-  footer.footer.page__footer
-    p Footer
+  footer.footer
+    h2 Контакты
+
+    .footer__location
+      address.footer__address Москва, Ленинские горы д.1, стр. 51, 1-й учебный корпус, аудитория 1122, (11 этаж)
+      .footer__map-links
+        a.footer__map(href="https://goo.gl/maps/CFYEtTgMAmJoZDyS7" target="_blank") Google Maps
+        a.footer__map(href="https://yandex.ru/maps/-/C8ummV25" target="_blank") Яндекс.Карты
+        a.footer__map(href="https://go.2gis.com/cxu39" target="_blank") 2ГИС
+
+    .footer__contacts
+      h3.footer__contacts-title Приемная комиссия
+      p.footer__contacts-info Телефон
+          a(href="tel:+79459395756") +7(945)939-57-56
+      p.footer__contacts-info Электронная почта
+          a(href="mailto:pk@esti.msu.ru") pk@esti.msu.ru
+
+      h3.footer__contacts-title Иностранный отдел
+      p.footer__contacts-info Телефон
+          a(href="+74959394482") +7(495)939-44-82
+          a(href="+79779295446") +7(977)929-54-46
+      p.footer__contacts-info Электронная почта
+          a(href="vshp_inotd@mail.ru") vshp_inotd@mail.ru
+
+    .footer__socials
+      a.footer__social-item(href="#")
+        p WeChat
+        img.footer__social-img(width="100" height="100" src="img/qr.png" alt="WeChat QR")
+      a.footer__social-item(href="#")
+        p WhatsApp
+        img.footer__social-img(width="100" height="100" src="img/qr.png" alt="WhatsApp QR")
+
 
