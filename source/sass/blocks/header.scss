@@ -2,11 +2,11 @@
   font-size: 2rem;
   font-weight: 700;
   background-color: $color-grey-light-1;
-  padding: 2.5rem 6rem;
+  padding: 2rem 0;
 
   &__container {
     display: grid;
-    grid-template-columns: max-content 1fr max-content;
+    grid-template-columns: max-content minmax(min-content, 1fr) minmax(13rem, max-content);
     column-gap: 5rem;
     align-items: center;
   }
@@ -47,7 +47,7 @@
     color: $color-grey-dark;
     display: inline-block;
     text-transform: uppercase;
-    padding: .5rem;
+    padding: .4rem;
     transition: all .4s ease;
   }
 

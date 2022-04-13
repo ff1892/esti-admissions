@@ -1,15 +1,35 @@
 .hero {
-  background-image: $gradient-dark;
+  background-image: linear-gradient(45deg, #9CBAED, #F3BAE3);
 
   &__container {
-    padding: 7rem 8rem;
+
+    padding: 1rem 12rem;
     display: grid;
-    grid-template-columns: max-content 1fr;
+    grid-template-columns: max-content minmax(max-content, 1fr);
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    overflow: hidden;
   }
 
   &__title {
-    font-size: 3.2rem;
-    line-height: 1.5;
-    font-weight: 400;
+    color: white;
+    font-size: 3.5rem;
+    font-weight: 700;
+    line-height: 1.2;
+    position: relative;
+    z-index: 2;
+  }
+
+  &__image {
+    justify-self: center;
+    transform: scale(1.4);
+    position: relative;
+    z-index: 1;
+
+
+    img {
+      width: 20rem;
+    }
   }
 }

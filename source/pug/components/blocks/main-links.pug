@@ -2,7 +2,10 @@
 
 mixin mainLinks()
   section.main-links
-    h2.main__links__item
-      a.main-links__link(href="#") О Высшей школе перевода
-    h2.main__links__item
-      a.main-links__link(href="#") Профессия: переводчик
+    .container.main-links__container
+      .main-links__item.main-links__item--university
+        h2.main-links__title
+          a.main-links__link(href="#") О Высшей школе перевода
+      .main-links__item.main-links__item--profession
+        h2.main-links__title
+          a.main-links__link(href="#") Профессия: переводчик
