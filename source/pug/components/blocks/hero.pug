@@ -1,7 +1,7 @@
-mixin hero()
+mixin hero(text)
   .hero
     .container.hero__container
       .hero__text
-        h1.hero__title Приёмная комиссия <br> Высшей школы перевода <br> МГУ имени М. В. Ломоносова
+        h1.hero__title !{text}
       .hero__image
         img(src="img/hero.svg" alt="Иллюстрация с книгами" width="300" height="300")
