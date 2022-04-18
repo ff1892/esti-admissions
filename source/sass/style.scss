@@ -11,6 +11,7 @@
 @import "global/reboot";
 @import "global/utils";
 @import "global/container";
+@import "global/typography";
 
 
 //  _______ BLOCK
@@ -19,4 +20,5 @@
 @import "blocks/hero";
 @import "blocks/main-links";
 @import "blocks/program-links";
+@import "blocks/advantages.scss";
 @import "blocks/footer";

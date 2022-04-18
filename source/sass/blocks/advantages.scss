@@ -1,0 +1,50 @@
+.advantages {
+  padding: 6rem 0;
+
+  &__text {
+    max-width: 90rem;
+    margin-bottom: 4rem;
+  }
+
+  &__title {
+    margin-bottom: 6rem;
+    text-align: center;
+  }
+}
+
+.advantage {
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  grid-template-rows: min-content 1fr;
+  column-gap: 4rem;
+  row-gap: 2rem;
+  margin-bottom: 5rem;
+
+  &--odd {
+    figure {
+      grid-column: 2 / -1;
+    }
+  }
+
+  &--even {
+    grid-template-columns: 2fr 3fr;
+  }
+
+  &__title {
+    align-self: start;
+  }
+
+  &__figure {
+    grid-row: 1 / -1;
+    justify-self: start;
+    align-self: start;
+  }
+
+  &__text-wrapper {
+    align-self: start;
+  }
+
+  &__text:not(:last-child) {
+    margin-bottom: 2rem;
+  }
+}
