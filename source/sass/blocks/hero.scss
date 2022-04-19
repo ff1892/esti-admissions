@@ -1,10 +1,10 @@
 .hero {
-  background-color: #fefefe;
+  // background-color: #fefefe;
+  background-image: linear-gradient(to bottom, #fefefe, $color-transparent);
 
   &__container {
 
-    padding: 1rem 12rem;
-    padding-top: 2rem;
+    padding: 2rem 12rem;
     display: grid;
     grid-template-columns: max-content minmax(max-content, 1fr);
     align-items: center;
@@ -23,7 +23,7 @@
 
   &__image {
     justify-self: center;
-    transform: scale(1.3);
+    transform: scale(1.1);
     position: relative;
     box-shadow: 0 3rem 2rem rga(0, 0, 0, .8);
     z-index: 1;

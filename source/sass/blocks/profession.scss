@@ -1,0 +1,35 @@
+.profession {
+  padding: 6rem 0 6rem 5rem;
+
+  &__block {
+    padding: 3rem 0;
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    column-gap: 3rem;
+  }
+
+  &__block--100 {
+    padding: 3rem 0;
+  }
+
+  &__title {
+    margin-bottom: 3rem;
+    grid-column: 1 / -1;
+  }
+
+  &__text:not(:last-child) {
+    margin-bottom: 2rem;
+  }
+
+  &__img-wrapper {
+    align-self: start;
+
+    figure {
+      border-radius: 5px;
+      overflow: hidden;
+      margin: 1rem;
+      box-shadow: -1.5rem 1.5rem 0 rgba($color: $color-primary, $alpha: 0.5),
+                  1rem -1rem 0 rgba($color: $color-primary, $alpha: 0.5);
+    }
+  }
+}

@@ -1,0 +1,9 @@
+mixin breadcrumbs(data)
+  .breadcrumbs
+    ul.breadcrumbs__list
+      each link in data
+        li.breadcrumbs__list-item
+          if link.active
+            a.breadcrumbs__link(href=`${link.href}`)= link.text
+          else
+            span.breadcrumbs__link--inactive= link.text
