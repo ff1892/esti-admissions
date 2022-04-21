@@ -1,0 +1,89 @@
+-
+    const dpr = {
+      breadcrumbs: [
+        {
+          active: true,
+          href: '/',
+          text: 'Приемная комиссия',
+        },
+        {
+          active: false,
+          text: 'Бакалавриат РФ',
+        }
+      ],
+      title: "Образовательная программа <br> &laquo;Лингвистика&raquo;",
+      buttons: [
+        {
+          text: 'Как поступить',
+          href: '#'
+        },
+        {
+          text: 'Экзамены',
+          href: '#'
+        }
+      ],
+      intro: 'Программа бакалавриата предназначена для российских абитуриентов, имеющих среднее общее и среднее профессиональное образование.',
+      card: [
+        {
+          key: "Срок обучения",
+          value: "4 года"
+        },
+        {
+          key: "Форма обучения",
+          value: "очная"
+        },
+        {
+          key: "Стоимость обучения",
+          value: "391 050 рублей в год"
+        },
+        {
+          key: "План приема",
+          value: "15 платных мест"
+        }
+      ],
+      exams: [
+        'Иностранный язык (ЕГЭ)',
+        'Обществознание <b>или</b> история (ЕГЭ)',
+        'Русский язык (ЕГЭ)',
+        'Иностранный язык (дополнительное вступительное испытание)',
+      ],
+      about: [
+        'Студенты Высшей школы перевода получают базовые знания и навыки в рамках образовательных программ высшего образования по направлению «Лингвистика».',
+        'Студенты факультета со знанием двух и более иностранных языков успешно осваивают применение информационных технологий для обеспечения профессиональной деятельности, способны осуществлять различные формы межкультурного взаимодействия в целях обеспечения сотрудничества при решении профессиональных задач, толерантно воспринимая социальные, этнические, конфессиональные, культурные и иные различия.'
+      ],
+    }
+
+mixin program()
+  .program.page
+    .container
+      +breadcrumbs(dpr.breadcrumbs)
+      .program__container
+        .program__content
+          section.program__section
+            h2.program__title.title-2 !{dpr.title}
+            .page-btns
+              each button in dpr.buttons
+                a.page-btns__item(href= button.href)= button.text
+            p.program__intro.text-basic= dpr.intro
+            .program__card
+              ul.program__card-list
+                each pair in dpr.card
+                  li.program__card-item
+                    span.program__card-key= pair.key + ":"
+                    span.program__card-value= pair.value
+            h3.program__exams-title.title-3 Вступительные испытания
+            ul.program__exams-list
+              each exam in dpr.exams
+                li.program__exams-item !{exam}
+            section.program__section.program__about
+              h3.title-3 О программе
+              each textblock in dpr.about
+                p.program__about-text.text-basic !{textblock}
+            section.program__section.program__about
+              h3.title-3 Профессиональные траектории лингвистов
+              p.program__about-text.text-basic
+                | Переводчики-лингвисты востребованы в международных организациях, органах государственной власти,
+                | посольствах и консульствах, переводческих агенствах, в бизнес-структурах, в сфере культуры и туризма, СМИ,
+                | в науке и образовании. <a href="profession.html">Подробнее о работе лингвистов и переводчиков</a>
+
+
