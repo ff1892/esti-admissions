@@ -1,0 +1,103 @@
+.program {
+  padding: 3rem 0;
+  margin-left: 6rem;
+
+  &__container {
+    max-width: 90rem;
+  }
+
+  &__intro-title {
+    margin-bottom: 3rem;
+  }
+
+  &__card {
+    margin: 3rem 0;
+    padding: 1rem 3rem;
+    background-color: #fff;
+    display: inline-block;
+    font-size: 1.8rem;
+    border-radius: 5px;
+    box-shadow: $shadow-basic;
+  }
+
+  &__card-list {
+    list-style: none;
+    padding: 2rem;
+  }
+
+  &__card-item {
+    padding: 1rem 0;
+
+    &:not(:last-child) {
+      border-bottom: 1px solid rgba($color-grey-dark, 0.4);
+    }
+  }
+
+  &__exams-list {
+    margin-left: 2rem;
+  }
+
+  &__exams-item {
+    padding: .4rem 0;
+    font-size: 1.8rem;
+  }
+
+  &__section {
+    padding: 2rem 0;
+  }
+
+  &__section-title {
+    margin-bottom: 2rem;
+  }
+
+  &__about-text:not(:last-child) {
+    margin-bottom: 1.5rem;
+  }
+
+  &__card-key {
+    margin-right: 1rem;
+    font-weight: 700;
+    min-width: 50%;
+  }
+
+  &__questions-title {
+    margin-bottom: 5rem;
+  }
+
+  &__questions > *:not(:last-child) {
+    border-bottom: 1px solid $color-grey-dark;
+  }
+}
+
+.page-btns {
+  margin-bottom: 2rem;
+
+  &__item {
+    display: inline-block;
+    padding: 1.5rem 3rem;
+    text-transform: uppercase;
+    font-size: 2rem;
+    font-weight: 700;
+    background-color: $color-primary;
+    min-width: 25rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    transition: all .2s;
+    border-radius: 50px;
+  }
+
+  &__item:link,
+  &__item:visited  {
+    color: #fff;
+    text-decoration: none;
+  }
+
+  &__item:hover {
+    background-color: $color-primary-dark;
+    transform: translateY(-2px);
+  }
+
+  &__item:not(:last-child) {
+    margin-right: 3rem;
+  }
+}

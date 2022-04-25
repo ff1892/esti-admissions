@@ -1,0 +1,31 @@
+.how {
+
+  &__stages-list {
+    list-style: none;
+  }
+
+  &__stages-item {
+    padding: .5rem 0;
+  }
+
+  &__stages-item-key {
+    margin-right: 2rem;
+  }
+
+  &__advantages {
+    margin: 1rem 0;
+    padding: 2rem 2rem;
+    border-radius: 5px;
+    background-color: $color-grey-light;
+    box-shadow: $shadow-basic;
+  }
+
+  &__advantages-title {
+    margin-bottom: 1.5rem;
+  }
+
+  &__advantages-list {
+    list-style: disc;
+    margin-left: 3rem;
+  }
+}

@@ -1,0 +1,106 @@
+-
+  const examsData = {
+    breadcrumbs: [
+      {
+        active: true,
+        href: '/',
+        text: 'Приемная комиссия',
+      },
+      {
+        active: true,
+        href: 'bc.html',
+        text: 'Бакалавриат РФ',
+      },
+      {
+        active: false,
+        text: 'Экзамены',
+      }
+    ],
+    title: "Бакалавриат. Экзамены",
+    buttons: [
+        {
+          text: 'О программе',
+          href: 'bc.html'
+        },
+        {
+          text: 'Как поступить',
+          href: 'bc-admissions.html'
+        }
+      ],
+    nav: [
+      {
+        text: 'Расписание экзаменов',
+        href: '#schedule',
+      },
+      {
+        text: 'Перечень экзаменов',
+        href: '#list',
+      },
+      {
+        text: 'Дополнительное вступительное испытание (ДВИ)',
+        href: '#dvi',
+      },
+      {
+        text: 'Регламент экзаменов',
+        href: '#rules',
+      },
+      {
+        text: 'Результаты экзаменов',
+        href: '#results',
+      },
+      {
+        text: 'Программа ДВИ и варианты прошлых лет',
+        href: '#program',
+      },
+    ],
+  }
+
+mixin exams()
+  .basic.exams
+    .container
+      +breadcrumbs(examsData.breadcrumbs)
+      .basic__container
+        .basic__content
+          h2.basic__title.title-2 !{examsData.title}
+          .page-btns
+              each button in examsData.buttons
+                a.page-btns__item(href= button.href)= button.text
+          .basic__block#schedule
+            h3.basic__block-title Расписание экзаменов
+            p.basic__text <b>ДВИ</b> — не позднее 25 июля 2022 г.
+          .basic__block#list
+            h3.basic__block-title Перечень экзаменов
+            p.basic__text Для поступления на программу бакалавриата необходимо предоставить результаты следующих вступительных испытаний:
+            ul.basic__block-list
+              li.basic__block-list-item Иностранный язык (ЕГЭ);
+              li.basic__block-list-item Русский язык (ЕГЭ);
+              li.basic__block-list-item Обществознание или история (ЕГЭ) &mdash; по выбору абитуриента;
+              li.basic__block-list-item Иностранный язык (дополнительное вступительное испытание).
+          .basic__block#dvi
+            h3.basic__block-title Дополнительное вступительное испытание (ДВИ)
+            p.basic__text Согласно российскому законодательству МГУ вправе проводить дополнительные вступительные испытания (ДВИ) при приеме на обучение по программам бакалавриата и специалитета.
+            p.basic__text Вступительный экзамен обязателен для всех абитуриентов университета. Он сдается один раз и засчитывается на все факультеты, для поступления на которые предусмотрено ДВИ по данному предмету.
+            p.basic__text Дополнительное вступительное испытание по иностранному языку проходит в письменной форме. Абитуриент может выбрать экзамен по английскому, испанскому, китайскому, немецкому или французскому языку. Выбранный иностранный язык в качестве ДВИ может не совпадать с языком, по которому абитуриент сдавал ЕГЭ.
+            p.basic__text Результаты ДВИ оцениваются по стобалльной шкале.
+          .basic__block#rules
+            h3.basic__block-title Регламент экзаменов
+            p.basic__text В 2022 году экзамен пройдет до 25 июля. Подробности будут размещены позже.
+          .basic__block#results
+            h3.basic__block-title Результаты экзаменов
+            p.basic__text Результаты экзаменов размещены <a href="/results">на отдельной странице</a>.
+          .basic__block#program
+            h3.basic__block-title Программа ДВИ и варианты прошлых лет
+            p.basic__text
+              a(href="https://www.msu.ru/entrance/program/forlang.html" target="_blank") Программа ДВИ по иностранным языкам
+            h4.basic__block-subtitle Варианты ДВИ по иностранным языкам в 2021 году
+            ul.basic__block-list
+              li.basic-block-list-item <a href="http://cpk.msu.ru/files/2021/tasks/eng_1.pdf" target="_blank">Английский язык (вариант 1)</a>
+              li.basic-block-list-item <a href="http://cpk.msu.ru/files/2021/tasks/eng_2.pdf" target="_blank">Английский язык (вариант 2)</a>
+              li.basic-block-list-item <a href="http://cpk.msu.ru/files/2021/tasks/ch_1.pdf" target="_blank">Китайский язык</a>
+              li.basic-block-list-item <a href="http://cpk.msu.ru/files/2021/tasks/sp_1.pdf" target="_blank">Испанский язык</a>
+              li.basic-block-list-item <a href="http://cpk.msu.ru/files/2021/tasks/fr_1.pdf" target="_blank">Французский язык</a>
+        .basic__nav
+          ul.basic__nav-list
+            each nav in examsData.nav
+              li.basic__nav-item
+                a.basic__nav-link(href=nav.href)= nav.text

@@ -1,0 +1,7 @@
+mixin question(questionData)
+  .question
+    input.question__input.visually-hidden(type="checkbox", id=questionData.id)
+    label.question__ask(for=questionData.id)= questionData.ask
+    .question__reply
+      each reply in questionData.reply
+        p !{reply}

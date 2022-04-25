@@ -1,0 +1,46 @@
+.skills {
+  margin-top: 4rem;
+  font-size: 1.6rem;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(min-content, 1fr));
+  gap: 2rem;
+
+  &__item {
+    padding: 2rem;
+    background-color: $color-grey-light;
+    border-radius: 5px;
+    box-shadow: 0 .5rem 0.5rem rgba($color-grey-dark, 0.1);
+  }
+
+  &__title {
+    text-transform: uppercase;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 3rem;
+    align-items: start;
+    letter-spacing: .1rem;
+    display: inline-block;
+    border-bottom: 2px solid $color-grey-dark;
+  }
+
+  &__list {
+    list-style: none;
+  }
+
+  &__feature {
+    margin-bottom: 1rem;
+    padding-left: 5rem;
+    position: relative;
+  }
+
+  &__feature::before {
+      position: absolute;
+      content: "";
+      width: 3rem;
+      height: 3rem;
+      left: 1rem;
+      background-image: url("../img/align-left.svg");
+      background-size: cover;
+
+  }
+}
