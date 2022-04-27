@@ -41,13 +41,14 @@
 
   &__lang-link:link,
   &__lang-link:visited {
+    border-radius: 5px;
     flex: 0 0 6rem;
     text-align: center;
     border: .3rem solid $color-grey-dark;
     color: $color-grey-dark;
     display: inline-block;
     text-transform: uppercase;
-    padding: .4rem;
+    padding: .4rem .6rem;
     transition: all .4s ease;
   }
 
