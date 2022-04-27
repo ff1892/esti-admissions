@@ -1,0 +1,70 @@
+mixin howSpf(howData)
+  .basic.how
+    .container
+      +breadcrumbs(howData.breadcrumbs)
+      .basic__container
+        .basic__content
+          h2.basic__title.title-2 !{howData.title}
+          .page-btns
+              each button in howData.buttons
+                a.page-btns__item(href= button.href)= button.text
+          .basic__block#stages
+            h3.basic__block-title Этапы приёмной кампании
+            ul.how__stages-list
+              each stage in howData.stages
+                li.how__stages-item
+                  span.how__stages-item-key= stage.key + ":"
+                  span.how__stages-item-value= stage.value
+          .basic__block#docs
+            h3.basic__block-title Документы, необходимые для поступления
+            ol.basic__list-ordered
+              each doc in howData.docs
+                li.basic__list-ordered-item !{doc.item}
+                if doc.blockDocs
+                  p.basic__text.basic__text--special Если документы об образовании (диплом) не будут выданы до окончания сроков подачи документов для поступления в МГУ, к рассмотрению может быть принято официальное письмо от образовательного учреждения (школы, колледжа, университета), подтверждающее окончание обучения в 2022 году с указанием точной даты получения документа об образовании / диплома.
+          .basic__block#adm
+            h3.basic__block-title Как подать документы
+            ol.basic__list-ordered
+              li.basic__list-ordered-item Через электронную информационную систему МГУ <b><a href="https://webanketa.msu.ru/" target="_blank">Webanketa</a></b>.
+                .how__advantages
+                  p.how__advantages-title Преимущества такого способа:
+                  ul.how__advantages-list
+                    li.how__advantages-item регистрация по номеру телефона или через <a href="https://www.mos.ru/" target="_blank">mos.ru</a>
+                    li.how__advantages-item помощь/чат с приёмной комиссией
+                    li.how__advantages-item информация о позиции в конкурсном списке (на сайте ЦПК МГУ)
+              li.basic__list-ordered-item Через операторов почтовой связи (с почтовым уведомлением и описью вложения) по адресу:
+                address.basic__text-small 119234, г. Москва, Ленинские горы, д. 1, МГУ имени М.В. Ломоносова, Высшая школа перевода (факультет), приёмная комиссия
+          .basic__block#accept
+            h3.basic__block-title Признание документов об образовании, полученных в иностранном государстве
+            p.basic__text Если вы получили предыдущее образование не в России, то для поступления в Московский университет ваше иностранное образование должно быть признано соответствующим образовательной программе, реализуемой в России. Признание иностранного образования и/или квалификации является обязательным условием зачисления в Московский университет.
+            p.basic__text Признание иностранного образования осуществляется с использованием системы <a href="https://recognition.msu.ru/login" target="_blank">АИС &laquo;Признание&raquo;</a>. Система АИС &laquo;Признание&raquo; начинает свою работу с 20 февраля 2022 года.
+            p.basic__text Для прохождения процедуры признания необходимо подготовить:
+            ol.basic__list-ordered
+              li.basic__list-ordered-item Действующее удостоверение личности, по которому вы планируете пересекать границу Российской Федерации с целью обучения;
+              li.basic__list-ordered-item Документ о вашем предыдущем образовании и приложения к нему;
+              li.basic__list-ordered-item Документ, подтверждающий смену фамилии имени или отчества, если в документе об образовании и в действующем удостоверении личности они не совпадают.
+            p.basic__text Полученные в иностранном государстве документы должны быть легализованы. С требуемой формой легализации документов, выданных в вашей стране, вы сможете ознакомиться <a href="https://www.msu.ru/int/intrul/legal(2020).pdf" target="_blank">здесь</a>.
+            p.basic__text Все документы, составленные на иностранном языке, должны сопровождаться нотариально заверенным переводом на русский язык.
+            p.basic__text Прохождение процедуры признания образования не приравнивается к подаче документов для поступления в МГУ.
+          .basic__block#enroll
+            h3.basic__block-title После экзаменов
+            p.basic__text Для зачисления на учебу студенты обязаны предоставить <b>оригиналы всех документов</b> лично в приемную комиссию факультета после приезда в Москву. Если оригиналы не будут представлены на факультет, университет имеет право расторгнуть договор об оказании образовательных услуг в одностороннем порядке.
+            ol.basic__list-ordered
+              li.basic__list-ordered-item В случае успешного прохождения вступительных испытаний подпишите онлайн-согласие на зачисление.
+              li.basic__list-ordered-item Заключите договор на обучение и внесите дистанционно оплату за первый семестр 2022/23.
+              li.basic__list-ordered-item Обратитесь на факультет для получения приглашения МГУ на въезд в Россию по учебной визе.
+          .basic__block#after
+            h3.basic__block-title После зачисления
+            p.basic__text Начало учебного года &mdash; 1 сентября.
+            p.basic__text Желаем удачи при поступлении!
+        .basic__nav
+          ul.basic__nav-list
+            each nav in howData.nav
+              li.basic__nav-item
+                a.basic__nav-link(href=nav.href)= nav.text
+
+
+
+
+
+

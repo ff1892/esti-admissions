@@ -1,7 +1,7 @@
 extends ../components/base/layout
 
 block variables
-  - const title = "Бакалавриат РФ. Как поступить"
+  - const title = "Специалитет РФ. Как поступить"
   - const lang = "ru"
   -
     const howData = {
@@ -13,23 +13,23 @@ block variables
         },
         {
           active: true,
-          href: 'bc.html',
-          text: 'Бакалавриат РФ',
+          href: 'sp.html',
+          text: 'Специалитет РФ',
         },
         {
           active: false,
           text: 'Как поступить',
         }
       ],
-      title: "Как поступить на программу бакалавриата",
+      title: "Как поступить на программу специалитета",
       buttons: [
           {
             text: 'О программе',
-            href: 'bc.html'
+            href: 'sp.html'
           },
           {
             text: 'Экзамены',
-            href: 'bc-exams.html'
+            href: 'sp-exams.html'
           }
         ],
       stages: [
@@ -89,5 +89,5 @@ block variables
 
 block main
   main.main
-    +hero("Российским абитуриентам. <br> Бакалавриат.")
+    +hero("Российским абитуриентам. <br> Специалитет.")
     +howBc(howData)

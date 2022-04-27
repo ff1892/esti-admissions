@@ -1,0 +1,34 @@
+mixin examsBcf(examsData)
+  .basic.exams
+    .container
+      +breadcrumbs(examsData.breadcrumbs)
+      .basic__container
+        .basic__content
+          h2.basic__title.title-2 !{examsData.title}
+          .page-btns
+              each button in examsData.buttons
+                a.page-btns__item(href= button.href)= button.text
+          .basic__block#schedule
+            h3.basic__block-title Расписание экзаменов
+            p.basic__text <b>Русский язык</b> — информация появится позже.
+            p.basic__text <b>Иностранный язык</b> — информация появится позже.
+          .basic__block#list
+            h3.basic__block-title Перечень экзаменов
+            p.basic__text Для поступления на программу бакалавриата необходимо предоставить результаты следующих вступительных испытаний:
+            ul.basic__block-list
+              li.basic__block-list-item Русский язык (собеседование)
+              li.basic__block-list-item Иностранный язык (собеседование)
+          .basic__block#about
+            h3.basic__block-title Об экзаменах
+            p.basic__text В 2022 году экзамены пройдут  в дистанционном формате на платформе Zoom и Online Test Pad.
+          .basic__block#rules
+            h3.basic__block-title Регламент экзаменов
+            p.basic__text Подробности будут размещены позже.
+          .basic__block#results
+            h3.basic__block-title Результаты экзаменов
+            p.basic__text Результаты экзаменов размещены <a href="/results">на отдельной странице</a>.
+        .basic__nav
+          ul.basic__nav-list
+            each nav in examsData.nav
+              li.basic__nav-item
+                a.basic__nav-link(href=nav.href)= nav.text

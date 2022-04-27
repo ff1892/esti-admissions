@@ -1,0 +1,54 @@
+mixin examsMg(examsData)
+  .basic.exams
+    .container
+      +breadcrumbs(examsData.breadcrumbs)
+      .basic__container
+        .basic__content
+          h2.basic__title.title-2 !{examsData.title}
+          .page-btns
+              each button in examsData.buttons
+                a.page-btns__item(href= button.href)= button.text
+          .basic__block#schedule
+            h3.basic__block-title Расписание экзаменов
+            p.basic__text <b>Иностранный язык</b> — информация появится позже.
+          .basic__block#list
+            h3.basic__block-title Перечень экзаменов
+            p.basic__text Для поступления на программу магистратуры необходимо предоставить результаты следующих вступительных испытаний:
+            ul.basic__block-list
+              li.basic__block-list-item Иностранный язык (письменно и устно)
+          .basic__block#about
+            h3.basic__block-title Об экзамене
+            p.basic__text В качестве вступительного испытания абитуриенты могут выбрать английский, французский, испанский, немецкий или китайский язык.
+            p.basic__text Экзамен состоит из письменной и устной части.
+            p.basic__text Письменная часть включает в себя перевод текста по страноведческой тематике на русский язык и лексико­-грамматический тест с выбором ответов из предложенных вариантов.
+            p.basic__text Примерные темы: проблемы экологии и окружающей среды, СМИ и средства коммуникации, образование и карьера, политика, глобализация.
+          .basic__block#rules
+            h3.basic__block-title Регламент экзаменов
+            p.basic__text Подробности будут размещены позже.
+          .basic__block#results
+            h3.basic__block-title Результаты экзаменов
+            p.basic__text Результаты экзаменов размещены <a href="/results">на отдельной странице</a>.
+          .basic__block#program
+            h3.basic__block-title Программа экзамена и варианты прошлых лет
+            p.basic__text
+              b
+                a(href="http://cpk.msu.ru/files/2015/magister_exams/36_inostr.pdf" target="_blank") Программа экзамена по иностранным языкам
+            ul.basic__block-list
+              li.basic-block-list-item Английский язык (стр. 1-7)
+              li.basic-block-list-item Французский язык (стр. 8-15)
+              li.basic-block-list-item Немецкий язык (стр. 16-20)
+              li.basic-block-list-item Испанский язык (стр. 21-27)
+              li.basic-block-list-item Китайский язык (стр. 28-33)
+
+            h4.basic__block-subtitle Пробные тесты 2021 года:
+            ul.basic__block-list
+              li.basic-block-list-item <a href="https://onlinetestpad.com/hprzwbzfrxubw" target="_blank">Английский язык</a>
+              li.basic-block-list-item <a href="https://onlinetestpad.com/hmz4xf53bku4u" target="_blank">Испанский язык</a>
+              li.basic-block-list-item <a href="https://onlinetestpad.com/hmyfm64o5f4kc" target="_blank">Китайский язык</a>
+              li.basic-block-list-item <a href="https://onlinetestpad.com/hp3hdpau7j4iu" target="_blank">Немецкий язык</a>
+              li.basic-block-list-item <a href="https://onlinetestpad.com/hoty7pbyyrwnw" target="_blank">Французский язык</a>
+        .basic__nav
+          ul.basic__nav-list
+            each nav in examsData.nav
+              li.basic__nav-item
+                a.basic__nav-link(href=nav.href)= nav.text

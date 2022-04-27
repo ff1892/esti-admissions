@@ -10,6 +10,14 @@
     margin-bottom: 3rem;
   }
 
+  &__intro-text {
+    margin-bottom: 1.5rem;
+
+    &--small {
+      font-size: 1.5rem;
+    }
+  }
+
   &__card {
     margin: 3rem 0;
     padding: 1rem 3rem;

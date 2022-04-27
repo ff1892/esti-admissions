@@ -1,7 +1,7 @@
 extends ../components/base/layout
 
 block variables
-  - const title = "Бакалавриат РФ. Экзамены"
+  - const title = "Специалитет ИН. Экзамены"
   - const lang = "ru"
   -
     const examsData = {
@@ -13,23 +13,23 @@ block variables
         },
         {
           active: true,
-          href: 'bc.html',
-          text: 'Бакалавриат РФ',
+          href: 'spf.html',
+          text: 'Специалитет ИН',
         },
         {
           active: false,
           text: 'Экзамены',
         }
       ],
-      title: "Бакалавриат. Экзамены",
+      title: "Специалитет ИН. Экзамены",
       buttons: [
           {
             text: 'О программе',
-            href: 'bc.html'
+            href: '  spf.html'
           },
           {
             text: 'Как поступить',
-            href: 'bc-admissions.html'
+            href: 'spf-admissions.html'
           }
       ],
       nav: [
@@ -42,8 +42,8 @@ block variables
           href: '#list',
         },
         {
-          text: 'Дополнительное вступительное испытание (ДВИ)',
-          href: '#dvi',
+          text: 'Об экзаменах',
+          href: '#about',
         },
         {
           text: 'Регламент экзаменов',
@@ -53,14 +53,10 @@ block variables
           text: 'Результаты экзаменов',
           href: '#results',
         },
-        {
-          text: 'Программа ДВИ и варианты прошлых лет',
-          href: '#program',
-        },
       ],
     }
 
 block main
   main.main
-    +hero("Российским абитуриентам. <br> Бакалавриат.")
-    +examsBc(examsData)
+    +hero("Иностранным абитуриентам. <br> Специалитет")
+    +examsSpf(examsData)

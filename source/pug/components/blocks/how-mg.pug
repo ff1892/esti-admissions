@@ -1,0 +1,56 @@
+mixin howMg(howData)
+  .basic.how
+    .container
+      +breadcrumbs(howData.breadcrumbs)
+      .basic__container
+        .basic__content
+          h2.basic__title.title-2 !{howData.title}
+          .page-btns
+              each button in howData.buttons
+                a.page-btns__item(href= button.href)= button.text
+          .basic__block#stages
+            h3.basic__block-title Этапы приёмной кампании
+            ul.how__stages-list
+              each stage in howData.stages
+                li.how__stages-item
+                  span.how__stages-item-key= stage.key + ":"
+                  span.how__stages-item-value= stage.value
+          .basic__block#docs
+            h3.basic__block-title Документы, необходимые для поступления
+            ol.basic__list-ordered
+              each doc in howData.docs
+                li.basic__list-ordered-item !{doc}
+            p.basic__text <a href="#">Список документов для иностранных абитуриентов</a>.
+          .basic__block#adm
+            h3.basic__block-title Как подать документы
+            p.basic__text Документы можно подать дистанционно и лично.
+            ol.basic__list-ordered
+              li.basic__list-ordered-item Через электронную информационную систему МГУ <b><a href="https://webanketa.msu.ru/" target="_blank">Webanketa</a></b>.
+                .how__advantages
+                  p.how__advantages-title Преимущества такого способа:
+                  ul.how__advantages-list
+                    li.how__advantages-item регистрация по номеру телефона или через <a href="https://www.mos.ru/" target="_blank">mos.ru</a>
+                    li.how__advantages-item помощь/чат с приёмной комиссией
+                    li.how__advantages-item информация о позиции в конкурсном списке (на сайте ЦПК МГУ)
+              li.basic__list-ordered-item Через суперсервис <a href="https://www.gosuslugi.ru/vuzonline" target="_blank">&laquo;Поступление в вуз онлайн&raquo;</a> портала &laquo;Госуслуги&raquo; .
+              li.basic__list-ordered-item Через операторов почтовой связи (с почтовым уведомлением и описью вложения) по адресу:
+                address.basic__text-small 119234, г. Москва, Ленинские горы, д. 1, МГУ имени М.В. Ломоносова, Высшая школа перевода (факультет), приёмная комиссия
+            p.basic__text Или документы можно подать лично. Обратите внимание на <a href="#">график работы приёмной комиссии</a>. Контакты приёмной комиссии факультета указаны внизу этой страницы.
+          .basic__block#enroll
+            h3.basic__block-title Зачисление
+            p.basic__text После успешного прохождения вступительных испытаний абитуриенты подают в приемную комиссию Высшей школы перевода согласие на зачисление. Далее необходимо заключить договор на оказание платных образовательных услуг и оплатить стоимость обучения в первом семестре. После этого МГУ издает приказ о зачислении.
+          .basic__block#after
+            h3.basic__block-title После зачисления
+            p.basic__text Начало учебного года &mdash; 1 сентября.
+            p.basic__text Желаем удачи при поступлении!
+        .basic__nav
+          ul.basic__nav-list
+            each nav in howData.nav
+              li.basic__nav-item
+                a.basic__nav-link(href=nav.href)= nav.text
+
+
+
+
+
+

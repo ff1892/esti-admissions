@@ -1,7 +1,7 @@
 extends ../components/base/layout
 
 block variables
-  - const title = "Бакалавриат РФ. Экзамены"
+  - const title = "Магистратура РФ. Экзамены"
   - const lang = "ru"
   -
     const examsData = {
@@ -13,23 +13,23 @@ block variables
         },
         {
           active: true,
-          href: 'bc.html',
-          text: 'Бакалавриат РФ',
+          href: 'mg.html',
+          text: 'Магистратура РФ',
         },
         {
           active: false,
           text: 'Экзамены',
         }
       ],
-      title: "Бакалавриат. Экзамены",
+      title: "Магистратура. Экзамены",
       buttons: [
           {
             text: 'О программе',
-            href: 'bc.html'
+            href: 'mg.html'
           },
           {
             text: 'Как поступить',
-            href: 'bc-admissions.html'
+            href: 'mg-admissions.html'
           }
       ],
       nav: [
@@ -42,8 +42,8 @@ block variables
           href: '#list',
         },
         {
-          text: 'Дополнительное вступительное испытание (ДВИ)',
-          href: '#dvi',
+          text: 'Об экзамене',
+          href: '#about',
         },
         {
           text: 'Регламент экзаменов',
@@ -54,7 +54,7 @@ block variables
           href: '#results',
         },
         {
-          text: 'Программа ДВИ и варианты прошлых лет',
+          text: 'Программа экзамена и варианты прошлых лет',
           href: '#program',
         },
       ],
@@ -62,5 +62,5 @@ block variables
 
 block main
   main.main
-    +hero("Российским абитуриентам. <br> Бакалавриат.")
-    +examsBc(examsData)
+    +hero("Российским абитуриентам. <br> Магистратура")
+    +examsMg(examsData)

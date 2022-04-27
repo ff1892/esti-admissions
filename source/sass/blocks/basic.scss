@@ -1,5 +1,7 @@
 .basic {
-  font-size: 1.8rem;
+  font-size: 1.7rem;
+  color: $color-grey-dark;
+  line-height: 1.5;
   padding: 2rem 0 4rem 0;
 
   &__title {
@@ -31,6 +33,12 @@
 
   &__list-ordered-item {
     padding: .5rem 0;
+  }
+
+  &__text--special {
+    margin: 1rem 0;
+    padding-left: 3rem;
+    border-left: 2px solid #000;
   }
 
   &__text:not(:last-child) {
