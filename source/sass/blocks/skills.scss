@@ -38,13 +38,13 @@
   }
 
   &__feature::before {
-      position: absolute;
-      content: "";
-      width: 3rem;
-      height: 3rem;
-      left: 1rem;
-      background-image: url($base-src + "../img/align-left.svg");
-      background-size: cover;
+    position: absolute;
+    content: "";
+    width: 3rem;
+    height: 3rem;
+    left: 1rem;
+    background-image: url($base-src + "img/align-left.svg");
+    background-size: cover;
 
   }
 }

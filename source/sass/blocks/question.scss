@@ -19,7 +19,7 @@
       height: 2.5rem;
       top: 2rem;
       right: 2rem;
-      background-image: url($base-src + '../img/plus.svg');
+      background-image: url($base-src + 'img/plus.svg');
       background-repeat: no-repeat;
       transform-origin: center center;
       transition: transform .3s ease;
@@ -27,11 +27,11 @@
     }
   }
 
-  &__input:checked ~ &__reply {
+  &__input:checked~&__reply {
     display: block;
   }
 
-  &__input:checked + &__ask::before {
+  &__input:checked+&__ask::before {
     transform: rotate(135deg);
   }
 
