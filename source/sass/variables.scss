@@ -21,9 +21,10 @@ $color-grey-dark: #2c2c2c;
 
 
 // VIEWPORTS
-$mobile: 430px;
-$tablet: 768px;
-$desktop: 960px;
+$big: 62.5em;  // 1000px
+$medium: 41.25em;  // 660px
+$small: 31.3em;  // 500px
+$extra-small: 19.5em;  // ~300px
 
 // gradients
 
@@ -32,4 +33,7 @@ $gradient-dark: linear-gradient(to bottom, $color-grey-light-1, $color-transpare
 // shadows
 
 $shadow-basic: 0 .5rem .5rem rgba(0, 0, 0, .05);
+
+// path
+$base-src: '';
 

@@ -5,7 +5,21 @@
 
   &__list {
     display: flex;
+    flex-wrap: wrap;
     list-style: none;
+    padding-top: 2rem;
+
+    @include mediaSmall() {
+      display: inline-block;
+    }
+  }
+
+  &__list-item {
+    flex-grow: 0;
+
+    @include mediaSmall() {
+      margin-bottom: 1rem;
+    }
   }
 
   &__list-item:not(:last-child) {

@@ -9,10 +9,15 @@
     grid-template-columns: repeat(2, 1fr) max-content;
     grid-template-rows: min-content 1fr;
     gap: 2rem;
+
+    @include mediaMedium() {
+      grid-template-columns: 1fr 1fr;
+      padding: 0 5rem;
+    }
   }
 
   &__title {
-    grid-column: 1 / 4;
+    grid-column: 1 / -1;
     font-size: 3rem;
   }
 
@@ -40,7 +45,7 @@
   }
 
   &__contacts-title {
-    padding: 1rem 0;
+    padding-bottom: 1rem;
   }
 
   &__contacts-info {
@@ -56,22 +61,31 @@
     padding: .3rem 0;
   }
 
+  &__socials {
+
+    @include mediaMedium() {
+      grid-column: 1 / -1;
+      display: flex;
+    }
+  }
+
   &__social-item {
     display: block;
     font-weight: 700;
 
     &:not(:last-child) {
       margin-bottom: 3rem;
+
+      @include mediaMedium() {
+        margin: 0;
+        margin-right: 3rem;
+      }
     }
   }
 
   &__social-item:link,
   &__social-item:visited {
     color: inherit;
-  }
-
-  &__social-img {
-    filter: invert(1);
   }
 
   &__info {

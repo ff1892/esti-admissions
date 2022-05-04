@@ -1,5 +1,4 @@
 .hero {
-  // background-color: #fefefe;
   background-image: linear-gradient(to bottom, #fefefe, $color-transparent);
 
   &__container {
@@ -10,6 +9,21 @@
     align-items: center;
     justify-content: center;
     gap: 2rem;
+
+    @include mediaBig() {
+      padding: 5rem;
+    }
+
+    @include mediaMedium {
+      display: block;
+      padding: 3rem;
+    }
+
+    @include mediaSmall {
+      padding: 3rem 2rem;
+      background-image: none;
+      background-color: $color-primary;
+    }
   }
 
   &__title {
@@ -19,6 +33,21 @@
     line-height: 1.2;
     position: relative;
     z-index: 2;
+
+    @include mediaBig() {
+      font-size: 2.8rem;
+    }
+
+    @include mediaMedium {
+      font-size: 2.5rem;
+      text-align: center;
+    }
+
+    @include mediaSmall {
+      font-size: 2.2rem;
+      line-height: 1.5;
+      color: $color-white;
+    }
   }
 
   &__image {
@@ -28,9 +57,17 @@
     box-shadow: 0 3rem 2rem rga(0, 0, 0, .8);
     z-index: 1;
 
+    @include mediaMedium {
+      display: none;
+    }
+
 
     img {
       width: 20rem;
+
+      @include mediaBig {
+        width: 18rem;
+      }
     }
   }
 }

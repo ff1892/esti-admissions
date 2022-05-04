@@ -8,7 +8,7 @@ mixin program(dpr)
             h2.program__intro-title.title-2 !{dpr.title}
             .page-btns
               each button in dpr.buttons
-                a.page-btns__item(href= button.href)= button.text
+                a.page-btns__item(href= baseHref + button.href)= button.text
             p.program__intro-text.text-basic !{dpr.intro}
             if dpr.introAdd
               p.program__intro-text.program__intro-text--small !{dpr.introAdd}
@@ -35,7 +35,9 @@ mixin program(dpr)
             p.program__about-text.text-basic
               | Переводчики-лингвисты востребованы в международных организациях, органах государственной власти,
               | посольствах и консульствах, переводческих агенствах, в бизнес-структурах, в сфере культуры и туризма, СМИ,
-              | в науке и образовании. <a href="profession.html">Подробнее о работе лингвистов и переводчиков</a>
+              | в науке и образовании.
+            p.program__about-text.text-basic
+              a(href= baseHref + 'profession.html') Подробнее о работе лингвистов и переводчиков
           section.program__section.program__qa
             h3.program__section-title.title-3.program__questions-title Вопросы и ответы
             .program__questions

@@ -3,7 +3,7 @@
     {
       active: true,
       href: '/',
-      text: 'Приемная комиссия',
+      text: 'Приёмная комиссия',
     },
     {
       active: false,
@@ -23,7 +23,7 @@ mixin prof-section()
           p.profession__text.text-basic Переводчики — наши проводники в другой мир. Перевод там, где есть соприкосновение культур. Новые фильмы, книги, компьютерные игры, новости, понятная для нас документация и инструкции — всё это невозможно без труда переводчиков.
         .profession__img-wrapper
           figure
-            img.profession__img(src="https://www.fillmurray.com/800/600")
+            img.profession__img(src="img/transl-1.svg" alt="Синхронный перевод")
       .profession__block
         h2.profession__title.title-2 Виды перевода
         .profession__text-wrapper
@@ -34,7 +34,9 @@ mixin prof-section()
           p.profession__text.text-basic Специализация письменного переводчика может быть более узкой. Хорошие переводчики в специальных отраслях (микроэлектроника, фармацевтика, авиастроение, пищевая промышленность) — востребованные и высокооплачиваемые специалисты.
         .profession__img-wrapper
           figure
-            img.profession__img(src="https://www.fillmurray.com/800/600")
+            picture
+              source(type="image/webp" srcset=`img/transl-2.webp`)
+              img.profession__img(src="img/transl-2.jpg" alt="Коммуникация")
       .profession__block--100#job
         h2.profession__title.title-2 Где могут работать переводчики-лингвисты?
         +prof-card()

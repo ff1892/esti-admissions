@@ -1,14 +1,14 @@
 -
   const headerLinks = [
-    {label: "Общая информация", href: "#hi"},
+    {label: "Общая информация", href: "#"},
     {label: "Объявления", href: "#"},
     {label: "Результаты экзаменов", href: "results.html"},
     {label: "Контакты", href: "#contacts"}
   ]
 
   const langLinks = [
-    {label: 'en', href: "#en"},
-    {label: '中文', href: "#ch"}
+    {label: 'en', href: "#"},
+    {label: '中文', href: "#"}
   ]
 
 mixin header()
@@ -16,10 +16,10 @@ mixin header()
     .container.header__container
       .header__logo
         a.header__logo-link(href="/")
-          img.header__logo-img(width="80" height="50" src="img/logo.svg")
+          img.header__logo-img(width="80" height="50" src= baseSrc + "img/logo.svg")
       .header__nav
         each link in headerLinks
-          a.header__nav-link(href= link.href)= link.label
+          a.header__nav-link(href= baseHref + link.href)= link.label
       .header__lang
         each link in langLinks
-          a.header__lang-link(href= link.href)= link.label
+          a.header__lang-link(href= baseHref + link.href)= link.label

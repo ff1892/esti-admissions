@@ -66,6 +66,16 @@
     display: grid;
     grid-template-columns: 5fr 1fr;
     gap: 5rem;
+
+    @include mediaMedium() {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__nav {
+    @include mediaMedium {
+      grid-row: 1 / 2;
+    }
   }
 
   &__nav-list {
@@ -80,6 +90,10 @@
 
   &__nav-item {
     padding: .8rem 0;
+
+    @include mediaMedium {
+      margin-bottom: 1rem;
+    }
   }
 
   &__nav-link {

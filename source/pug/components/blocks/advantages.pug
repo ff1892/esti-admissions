@@ -74,7 +74,7 @@
     {
       active: true,
       href: '/',
-      text: 'Приемная комиссия',
+      text: 'Приёмная комиссия',
     },
     {
       active: false,
@@ -87,13 +87,16 @@ mixin advantage(data)
   div(class=`advantage advantage--${data.class}`)
     h3.advantage__title.title-3= data.title
     figure.advantage__figure
-      img.advantage__img(src=`img/${data.imgId}.jpg` alt=`${data.title}`)
+      picture
+        source(type="image/webp" srcset= baseSrc `img/${data.imgId}.webp`)
+        img.advantage__img(src= baseSrc + `img/${data.imgId}.jpg` alt=`${data.title}`)
+
     .advantage__text-wrapper
       each textItem in data.text
         p.advantage__text.text-basic !{textItem}
 
 mixin advantages()
-  .container
+  .container.advantages__container
     +breadcrumbs(breadData)
     section.advantages
       p.advantages__text.text-basic Высшая школа перевода &mdash; факультет МГУ имени М.В. Ломоносова, созданный в 2005 году. Мы первая высшая школа перевода в России, созданная в структуре классического университета. Факультет готовит переводчиков и лингвистов, профессионально владеющих минимум двумя иностранными языками, современными переводческими технологиями и обладающих глубокими фундаментальными знаниями в гуманитарной сфере.

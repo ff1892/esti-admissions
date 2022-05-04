@@ -2,6 +2,10 @@
   padding: 3rem 0;
   margin-left: 6rem;
 
+  @include mediaMedium() {
+    margin-left: 0;
+  }
+
   &__container {
     max-width: 90rem;
   }

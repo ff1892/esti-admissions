@@ -20,6 +20,11 @@
   row-gap: 2rem;
   margin-bottom: 5rem;
 
+  @include mediaMedium() {
+    max-width: 55rem;
+    display: block;
+  }
+
   &--odd {
     figure {
       grid-column: 2 / -1;
@@ -32,12 +37,20 @@
 
   &__title {
     align-self: start;
+
+    @include mediaMedium() {
+      margin-bottom: 3rem;
+    }
   }
 
   &__figure {
     grid-row: 1 / -1;
     justify-self: start;
     align-self: start;
+
+    @include mediaMedium() {
+      margin-bottom: 3rem;
+    }
   }
 
   &__text-wrapper {

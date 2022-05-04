@@ -4,6 +4,6 @@ mixin breadcrumbs(data)
       each link in data
         li.breadcrumbs__list-item
           if link.active
-            a.breadcrumbs__link(href=`${link.href}`)= link.text
+            a.breadcrumbs__link(href= baseHref + `${link.href}`)= link.text
           else
             span.breadcrumbs__link--inactive= link.text

@@ -1,11 +1,20 @@
 .profession {
   padding: 6rem 0 6rem 5rem;
 
+  @include mediaMedium() {
+    padding: 4rem 0;
+  }
+
   &__block {
     padding: 3rem 0;
     display: grid;
     grid-template-columns: 3fr 2fr;
     column-gap: 5rem;
+
+    @include mediaMedium {
+      grid-template-columns: 1fr;
+      row-gap: 2rem;
+    }
   }
 
   &__block--100 {
@@ -15,6 +24,13 @@
   &__title {
     margin-bottom: 3rem;
     grid-column: 1 / -1;
+  }
+
+  &__text {
+
+    @include mediaMedium() {
+      max-width: 55rem;
+    }
   }
 
   &__text:not(:last-child) {
@@ -28,8 +44,10 @@
       border-radius: 5px;
       overflow: hidden;
       margin: 1rem;
-      box-shadow: -1.5rem 1.5rem 0 rgba($color: $color-primary, $alpha: 0.5),
-                  1rem -1rem 0 rgba($color: $color-primary, $alpha: 0.5);
+    }
+
+    @include mediaMedium() {
+      grid-row: 2 / 3;
     }
   }
 }

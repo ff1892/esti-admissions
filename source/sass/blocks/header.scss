@@ -5,10 +5,28 @@
   padding: 2rem 0;
 
   &__container {
+    margin: 0 auto;
     display: grid;
     grid-template-columns: max-content minmax(min-content, 1fr) minmax(13rem, max-content);
     column-gap: 5rem;
     align-items: center;
+
+    @include mediaMedium() {
+      column-gap: 4rem;
+    }
+
+    @include mediaSmall() {
+      display: block;
+    }
+  }
+
+  &__logo {
+
+    @include mediaSmall {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 2rem;
+    }
   }
 
   &__nav {
@@ -16,10 +34,29 @@
     justify-self: center;
     display: flex;
     flex-wrap: wrap;
+
+    @include mediaSmall {
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+  }
+
+  &__nav-link {
+    display: block;
+
+    @include mediaSmall {
+      text-align: center;
+    }
   }
 
   &__nav-link:not(:last-child) {
     margin-right: 2rem;
+
+    @include mediaSmall {
+      margin: 0;
+    }
   }
 
   &__nav-link:link,
@@ -36,7 +73,25 @@
 
   &__lang {
     display: flex;
+    flex-wrap: wrap;
     gap: 1rem;
+
+    @include mediaMedium() {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    @include mediaSmall {
+      flex-direction: row;
+    }
+  }
+
+  &__lang-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 1;
   }
 
   &__lang-link:link,
@@ -44,11 +99,11 @@
     border-radius: 5px;
     flex: 0 0 6rem;
     text-align: center;
+    min-width: 6rem;
+    min-height: 4rem;
     border: .3rem solid $color-grey-dark;
     color: $color-grey-dark;
-    display: inline-block;
     text-transform: uppercase;
-    padding: .4rem .6rem;
     transition: all .4s ease;
   }
 

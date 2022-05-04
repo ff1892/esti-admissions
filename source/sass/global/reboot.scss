@@ -10,18 +10,29 @@ html,
 body {
   margin: 0;
   padding: 0 1rem;
+
+  @include mediaMedium() {
+    padding: 0;
+  }
 }
 
 html {
   font-size: 62.5%;
-
-
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  // оптимизация выравнивания шрифта относительно центра строки
   text-rendering: optimizeLegibility;
-  // если по прежнему есть проблемы с выравниванием
-  // https://transfonter.org/ - включите настройку https://prnt.sc/12rnt6g и переконвертируйте шрифт
+
+  @include mediaBig() {
+    font-size: 56.25%;
+  }
+
+  @include mediaMedium() {
+    font-size: 50%;
+  }
+
+  @include mediaExtraSmall() {
+    font-size: 43.75%;
+  }
 }
 
 body {
