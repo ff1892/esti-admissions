@@ -8,12 +8,12 @@ block variables
       breadcrumbs: [
         {
           active: true,
-          href: '/',
+          href: '',
           text: 'Приёмная комиссия',
         },
         {
           active: true,
-          href: 'sp.html',
+          href: 'sp',
           text: 'Специалитет РФ',
         },
         {
@@ -25,11 +25,11 @@ block variables
       buttons: [
           {
             text: 'О программе',
-            href: 'sp.html'
+            href: 'sp'
           },
           {
             text: 'Как поступить',
-            href: 'sp-admissions.html'
+            href: 'sp-admissions'
           }
       ],
       nav: [
@@ -62,5 +62,5 @@ block variables
 
 block main
   main.main
-    +hero("Российским абитуриентам. <br> Специалитет.")
+    +hero("Российским абитуриентам. <br> Специалитет")
     +examsBc(examsData)

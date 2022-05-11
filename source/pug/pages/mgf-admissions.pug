@@ -8,12 +8,12 @@ block variables
       breadcrumbs: [
         {
           active: true,
-          href: '/',
+          href: '',
           text: 'Приёмная комиссия',
         },
         {
           active: true,
-          href: 'mgf.html',
+          href: 'mgf',
           text: 'Магистратура ИН',
         },
         {
@@ -25,11 +25,11 @@ block variables
       buttons: [
           {
             text: 'О программе',
-            href: 'mgf.html'
+            href: 'mgf'
           },
           {
             text: 'Экзамены',
-            href: 'mgf-exams.html'
+            href: 'mgf-exams'
           }
         ],
       stages: [
@@ -93,5 +93,5 @@ block variables
 
 block main
   main.main
-    +hero("Иностранным абитуриентам. <br> Магистратура.")
+    +hero("Иностранным абитуриентам. <br> Магистратура")
     +howMgf(howData)

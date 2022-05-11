@@ -1,0 +1,32 @@
+.info-button {
+  display: inline;
+  margin-left: 1.5rem;
+  position: relative;
+
+  &__label {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    background-color: $color-grey-dark;
+    color: $color-white;
+    font-weight: 700;
+    border-radius: 50%;
+  }
+
+  &__window {
+    display: none;
+    font-size: 1.4rem;
+    position: absolute;
+    padding: 2rem;
+    background-color: $color-grey-dark;
+    color: $color-white;
+    top: 3rem;
+    border-radius: 10px;
+  }
+
+  &__input:checked ~ &__window {
+    display: block;
+  }
+}

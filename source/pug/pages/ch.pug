@@ -1,0 +1,55 @@
+- const baseSrc = "http://esti.msu.ru/netcat_files/userfiles/pk/"
+- const baseHref = "/pk/"
+
+doctype html
+
+include ../components/components
+
+html(lang="ch")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible" content="IE=edge")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    meta(name="description" content="高级翻译学院（翻译高等学院")
+    link(rel="stylesheet" href= baseSrc + "css/style.min.css")
+    title 高级翻译学院 - 翻译高等学院
+    link(rel="apple-touch-icon" sizes="180x180" href= baseSrc + "img/favicon/apple-touch-icon.png")
+    link(rel="icon" type="image/png" sizes="32x32" href= baseSrc + "img/favicon/favicon-32x32.png")
+    link(rel="icon" type="image/png" sizes="16x16" href= baseSrc + "img/favicon/favicon-16x16.png")
+    link(rel="manifest" href= baseSrc + "img/favicon/site.webmanifest")
+    link(rel="mask-icon" href= baseSrc + "img/favicon/safari-pinned-tab.svg" color="#5bbad5")
+    meta(name="msapplication-TileColor" content="#da532c")
+    meta(name="theme-color" content="#ffffff")
+  body
+    .wrapper
+      +sprite()
+      .ch
+        header.ch__header
+          .ch__header-logo
+            a.header__logo-link(href= baseHref aria-label="Страница приёмной комиссии" title="На страницу приёмной комиссии")
+              img.header__logo-img(width="120" height="80" src= baseSrc + "img/logo.svg" alt="Логотип факультета")
+          .ch__header-links
+            a.ch__header-links-item(href="#about") 高翻学院简介
+            a.ch__header-links-item(href=baseHref + "ch/bc") 本科
+            a.ch__header-links-item(href=baseHref +"ch/mg") 研究生
+        main.ch__main#about
+          .container
+            h1.visually-hidden 高级翻译学院（翻译高等学院）
+            section.ch__main-section
+              h2.ch__main-section-title 高翻学院简介
+              p.ch__main-section-text 莫大高翻学院的办学宗旨是培养全面掌握现代化翻译技术的专业翻译人才，以及国内外翻译理论、历史和方法论领域的研究专家。
+              p.ch__main-section-text 外国留学生将会学习俄语并作为第一外语，第二外语可选择英语、汉语、德语、法语、意大利语及西班牙语。
+              p.ch__main-section-text 翻译系开设多门选修课程，旨在加深学生对俄语、俄罗斯文化及历史的研究。
+              p.ch__main-section-text 所有课程由莫斯科大学教授及教师团队,以及莫斯科其他大学的翻译理论及实践方面的专家授课，外校专家均在口笔译、科技翻译、社会政治与文学翻译等领域有丰富的实战经验。
+              p.ch__main-section-text 翻译系按传统每年开设《现代俄语》夏季语言培训班，借此机会学生们有机会在短期内提高俄语水平，了解俄罗斯文化传统和俄罗斯民族精神特点，并与来自世界各国的同龄人进行交流。
+              p.ch__main-section-text 了解俄罗斯文化不仅仅是在课堂上，学院还经常推出各种游学项目。
+              p.ch__main-section-text 我系学生不仅常参观莫斯科及莫斯科州的名胜古迹，还有机会游览俄罗斯其他城市及相邻国家。与俄罗斯学生一同交流有助于开阔视野，提高俄语水平。
+              p.ch__main-section-text 本系学生积极参与各类科技文化活动。系里组建了《蜕变》戏剧社团，在这里学生们可以学习表演技巧、口才、提高发音、创造性地展现自我。
+              p.ch__main-section-text 本系毕业生在政治、经济、法律、文化、教育领域，特别是在重要的国际组织、非政府国家间机构、国内公司及跨国集团从事翻译工作。
+              .ch__video-wrapper
+                <iframe class="ch__video-iframe" src="https://vk.com/video_ext.php?oid=-78019879&id=456239750&hash=7cc2c4955894f2bf&hd=2" width="100%" height="100%" allow="autoplay; encrypted-media; fullscreen; picture-in-picture;" frameborder="0" allowfullscreen></iframe>
+            section.ch__main-section
+              h2.ch__main-section-title 联系方式
+              p.ch__main-section-text 高翻学院招生办联系电话（留学生）: +7 (977) 929-54-46
+              p.ch__main-section-text 高翻学院外办邮箱: vshp_inotd@mail.ru
+              p.ch__main-section-text 地址：邮编：119991莫斯科市列宁山1-51，莫斯科国立大学文科1号教学楼 高翻学院

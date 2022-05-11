@@ -1,25 +1,28 @@
 -
   const headerLinks = [
-    {label: "Общая информация", href: "#"},
-    {label: "Объявления", href: "#"},
-    {label: "Результаты экзаменов", href: "results.html"},
+    {label: "Общая информация", href: "common"},
+    {label: "Объявления", href: "notice"},
+    {label: "Результаты экзаменов", href: "result"},
     {label: "Контакты", href: "#contacts"}
   ]
 
   const langLinks = [
-    {label: 'en', href: "#"},
-    {label: '中文', href: "#"}
+    {label: 'en', href: "http://esti.msu.ru/en/"},
+    {label: '中文', href: "http://esti.msu.ru/pk/ch"}
   ]
 
 mixin header()
   header.header
     .container.header__container
       .header__logo
-        a.header__logo-link(href="/")
-          img.header__logo-img(width="80" height="50" src= baseSrc + "img/logo.svg")
+        a.header__logo-link(href= baseHref aria-label="Страница приёмной комиссии" title="На страницу приёмной комиссии")
+          img.header__logo-img(width="80" height="50" src= baseSrc + "img/logo.svg" alt="Логотип факультета")
       .header__nav
         each link in headerLinks
-          a.header__nav-link(href= baseHref + link.href)= link.label
+          if link.label === "Контакты"
+            a.header__nav-link(href= link.href)= link.label
+          else
+            a.header__nav-link(href= baseHref + link.href)= link.label
       .header__lang
         each link in langLinks
-          a.header__lang-link(href= baseHref + link.href)= link.label
+          a.header__lang-link(href= link.href)= link.label

@@ -1,0 +1,108 @@
+.ch {
+
+  &__header {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: linear-gradient(to bottom, rgba(255, 0, 0, 0.05), rgba(255, 0, 0, 0.1)), url($base-src + "img/ch-bg.jpg");
+    background-size: cover;
+    background-color: #fefefe;
+  }
+
+  &__header-logo {
+    margin-top: 5rem;
+  }
+
+  &__header-links {
+    margin-top: 20vh;
+    font-size: 3rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 4rem;
+  }
+
+  &__header-links-item {
+    text-align: center;
+    display: inline-block;
+    padding: 3rem 8rem;
+    background-color: $color-grey-light-1;
+    border-radius: 150px;
+
+    @include mediaSmall {
+      grid-column: 1 / -1;
+      padding: 2rem 7rem;
+    }
+
+    &:first-child {
+      grid-column: 1 / -1;
+    }
+  }
+
+  &__header-links-item:link,
+  &__header-links-item:visited {
+    color: $color-grey-dark;
+    text-decoration: none;
+  }
+
+  &__header-links-item:hover {
+    background-color: $color-primary;
+    color: $color-grey-light-1;
+  }
+
+  &__main {
+    margin-top: 4rem;
+  }
+
+  &__main-section {
+    padding: 4rem 0;
+    max-width: 90rem;
+  }
+
+  &__main-section-title {
+    font-size: 4rem;
+    margin-bottom: 3rem;
+  }
+
+  &__main-section-title {
+    font-size: 4rem;
+    margin-bottom: 4rem;
+  }
+
+  &__main-section-text {
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+  }
+
+  &__video-wrapper {
+    position: relative;
+    padding-bottom: 56.25%;
+  }
+
+  &__video-iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  &__lead {
+    margin-top: 20vh;
+    margin-bottom: 0;
+    font-size: 4rem;
+    color: white;
+    margin-bottom: 2rem;
+  }
+
+  &__title {
+    margin: 0;
+    color: white;
+    font-size: 10rem;
+    line-height: 1;
+  }
+
+  ol {
+    padding-left: 3rem;
+  }
+}

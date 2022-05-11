@@ -1,5 +1,5 @@
 mixin program(dpr)
-  main.program.page
+  section.program.page
     .container
       +breadcrumbs(dpr.breadcrumbs)
       .program__container
@@ -18,6 +18,8 @@ mixin program(dpr)
                   li.program__card-item
                     span.program__card-key= pair.key + ":"
                     span.program__card-value= pair.value
+                    if pair.key === 'Стоимость обучения'
+                      +info
           section.program__section
             h3.program__section-title.title-3 Вступительные испытания
             ol.program__exams-list
@@ -37,7 +39,7 @@ mixin program(dpr)
               | посольствах и консульствах, переводческих агенствах, в бизнес-структурах, в сфере культуры и туризма, СМИ,
               | в науке и образовании.
             p.program__about-text.text-basic
-              a(href= baseHref + 'profession.html') Подробнее о работе лингвистов и переводчиков
+              a(href= baseHref + 'profession') Подробнее о работе лингвистов и переводчиков
           section.program__section.program__qa
             h3.program__section-title.title-3.program__questions-title Вопросы и ответы
             .program__questions

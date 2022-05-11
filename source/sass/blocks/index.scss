@@ -1,0 +1,32 @@
+.index {
+  font-size: 1.4rem;
+  padding: 1rem 0;
+  background-color: $color-grey-light-1;
+
+  @include mediaSmall() {
+    text-align: center;
+  }
+
+  &__wrapper {
+    padding: 0 6rem;
+  }
+
+  &__arrow {
+    margin-right: 1rem;
+    display: inline-block;
+    transition: transform 0.4s ease;
+  }
+
+  &__link:link,
+  &__link:visited {
+    color: $color-grey-dark;
+  }
+
+  &__container {
+    display: inline-block;
+  }
+
+  &__container:hover &__arrow{
+    transform: translateX(-1rem);
+  }
+}

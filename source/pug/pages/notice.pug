@@ -1,0 +1,14 @@
+extends ../components/base/layout
+
+block variables
+  - const title = "Объявления"
+  - const lang = "ru"
+
+block main
+  main.cms
+    .container
+      .cms__content
+        .notice
+          h1 Объявления
+          +noticeBlock()
+          +noticeBlock()

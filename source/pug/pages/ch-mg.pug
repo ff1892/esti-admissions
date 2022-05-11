@@ -1,0 +1,65 @@
+- const baseSrc = "http://esti.msu.ru/netcat_files/userfiles/pk/"
+- const baseHref = "/pk/"
+
+doctype html
+
+include ../components/components
+
+html(lang="ch")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible" content="IE=edge")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    meta(name="description" content="高级翻译学院（翻译高等学院")
+    link(rel="stylesheet" href= baseSrc + "css/style.min.css")
+    title 高级翻译学院 - 翻译高等学院
+    link(rel="apple-touch-icon" sizes="180x180" href= baseSrc + "img/favicon/apple-touch-icon.png")
+    link(rel="icon" type="image/png" sizes="32x32" href= baseSrc + "img/favicon/favicon-32x32.png")
+    link(rel="icon" type="image/png" sizes="16x16" href= baseSrc + "img/favicon/favicon-16x16.png")
+    link(rel="manifest" href= baseSrc + "img/favicon/site.webmanifest")
+    link(rel="mask-icon" href= baseSrc + "img/favicon/safari-pinned-tab.svg" color="#5bbad5")
+    meta(name="msapplication-TileColor" content="#da532c")
+    meta(name="theme-color" content="#ffffff")
+  body
+    .wrapper
+      +sprite()
+      .ch
+        header.ch__header
+          .ch__header-logo
+            a.header__logo-link(href= baseHref aria-label="Страница приёмной комиссии" title="На страницу приёмной комиссии")
+              img.header__logo-img(width="120" height="80" src= baseSrc + "img/logo.svg" alt="Логотип факультета")
+          p.ch__lead ⾼级翻译学院
+          h1.ch__title 研究生
+        main.ch__main#about
+          .container
+            section.ch__main-section
+              h2.ch__main-section-title 2022年入学须知
+              p.ch__main-section-text 2022年6月15日起开始接收文件。
+              p.ch__main-section-text 文件上传至 <a href="https://webanketa.msu.ru/" target="_blank">webanketa.msu.ru</a> 网站。<a href="http://esti.msu.ru/netcat_files/userfiles/Files/ab/2021/2021_form_sample_foreign.pdf" target="_blank"><strong>申请表填写指南</strong></a>
+              p.ch__main-section-text 莫斯科国立大学学年为9月1日至次年6月30日。
+              p.ch__main-section-text <a href="http://studentin.msu.ru/main-ch" target="_blank">外国留学生在线门户网站。</a>
+            section.ch__main-section
+              h2.ch__main-section-title 培养方向：《跨语言交际俄语》
+              p.ch__main-section-text 毕业后授予《语言学硕士》学位。
+              p.ch__main-section-text 学制：2年
+              p.ch__main-section-text 授课方式：全日制
+              p.ch__main-section-text 授课语言：俄语
+              p.ch__main-section-text 学费：430 000 卢布/年
+            section.ch__main-section
+              h2.ch__main-section-title 为参加入系考试，需向高翻译学院提交以下材料
+              ol
+               li.ch__main-section-text 本科毕业证及学位证或专家毕业证、成绩单（应包含所学科目名称及相应成绩）的彩色扫描件
+               li.ch__main-section-text 毕业证（即：本科毕业证＋学位证）及成绩单（应包含所学科目名称及相应成绩）俄文翻译公证件的彩色扫描件
+               li.ch__main-section-text 护照前两页的彩色扫描件
+               li.ch__main-section-text 护照前两页俄文翻译公证件的彩色扫描件
+               li.ch__main-section-text 3x4证件照（电子版)
+              p.ch__main-section-text
+                strong 所有材料的俄语翻译件需在公证处公证或在文件颁发机构所在国的俄罗斯大使馆办理使馆认证。
+              p.ch__main-section-text 入学时，学生必须在到达莫斯科后亲自向学校的招生办提交所有上传文件的原件。若未提交原件，校方有权单方面终止与该生的教育合同。
+            section.ch__main-section
+              h2.ch__main-section-title 研究生入学考试
+              ol
+               li.ch__main-section-text 俄语（笔试＋口试）
+            section.ch__main-section
+              .ch__video-wrapper
+                <iframe class="ch__video-iframe" src="https://vk.com/video_ext.php?oid=-78019879&id=456239633&hash=73c47b9e0af3f711&hd=2" width="100%" height="100%" allow="autoplay; encrypted-media; fullscreen; picture-in-picture;" frameborder="0" allowfullscreen></iframe>

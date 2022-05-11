@@ -7,7 +7,7 @@ mixin examsMgf(examsData)
           h2.basic__title.title-2 !{examsData.title}
           .page-btns
               each button in examsData.buttons
-                a.page-btns__item(href= button.href)= button.text
+                a.page-btns__item(href= baseHref + button.href)= button.text
           .basic__block#schedule
             h3.basic__block-title Расписание экзаменов
             p.basic__text <b>Русский язык</b> — информация появится позже.
@@ -24,7 +24,7 @@ mixin examsMgf(examsData)
             p.basic__text Подробности будут размещены позже.
           .basic__block#results
             h3.basic__block-title Результаты экзаменов
-            a.basic__text(href= baseHref + "results.html") Результаты экзаменов размещены на отдельной странице.
+            a.basic__text(href= baseHref + "results") Результаты экзаменов размещены на отдельной странице.
         .basic__nav
           ul.basic__nav-list
             each nav in examsData.nav

@@ -7,7 +7,7 @@ mixin howMg(howData)
           h2.basic__title.title-2 !{howData.title}
           .page-btns
               each button in howData.buttons
-                a.page-btns__item(href= button.href)= button.text
+                a.page-btns__item(href= baseHref + button.href)= button.text
           .basic__block#stages
             h3.basic__block-title Этапы приёмной кампании
             ul.how__stages-list
