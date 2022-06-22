@@ -26,7 +26,32 @@
     display: inline-block;
   }
 
-  &__container:hover &__arrow{
+  &__container:hover &__arrow {
     transform: translateX(-1rem);
+  }
+}
+
+.schedule {
+  background-color: $color-grey-light-1;
+  padding: 1rem 0;
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+
+  a {
+    border: 2px solid $color-grey-dark;
+    padding: 1rem 4rem;
+    text-decoration: none;
+    border-radius: 150px;
+  }
+
+  a:link,
+  a:visited {
+    color: $color-grey-dark;
+  }
+
+  a:hover {
+    opacity: 0.8;
   }
 }

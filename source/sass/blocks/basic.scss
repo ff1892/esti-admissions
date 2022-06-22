@@ -32,7 +32,7 @@
   }
 
   &__list-ordered-item {
-    padding: .5rem 0;
+    padding: 0.5rem 0;
   }
 
   &__text--special {
@@ -89,7 +89,7 @@
   }
 
   &__nav-item {
-    padding: .8rem 0;
+    padding: 0.8rem 0;
 
     @include mediaMedium {
       margin-bottom: 1rem;
@@ -99,12 +99,17 @@
   &__nav-link {
     font-size: 1.6rem;
     display: block;
-    padding: .2rem 0;
+    padding: 0.2rem 0;
     line-height: 1.1;
   }
 
   &__nav-link:link,
   &__nav-link:visited {
     color: $color-grey-dark;
+  }
+
+  &__subh {
+    padding-top: 1rem;
+    margin-bottom: 2.5rem;
   }
 }

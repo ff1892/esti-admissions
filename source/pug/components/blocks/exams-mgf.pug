@@ -10,7 +10,10 @@ mixin examsMgf(examsData)
                 a.page-btns__item(href= baseHref + button.href)= button.text
           .basic__block#schedule
             h3.basic__block-title Расписание экзаменов
-            p.basic__text <b>Русский язык</b> — информация появится позже.
+            h4.basic__subh Первая волна
+            p.basic__text <b>27 июня</b> &mdash; русский язык
+            h4.basic__subh Вторая волна
+            p.basic__text <b>25 июля</b> &mdash; русский язык
           .basic__block#list
             h3.basic__block-title Перечень экзаменов
             p.basic__text Для поступления на программу бакалавриата необходимо предоставить результаты следующих вступительных испытаний:
@@ -22,6 +25,9 @@ mixin examsMgf(examsData)
           .basic__block#rules
             h3.basic__block-title Регламент экзаменов
             p.basic__text Подробности будут размещены позже.
+          .basic__block#program
+            h3.basic__block-title Программа экзаменов
+            p.basic__text <a href="http://esti.msu.ru/netcat_files/userfiles/Files/ab/samples/rus%202019%20exam.pdf" target="_blank">Примеры заданий тестового типа</a>.
           .basic__block#results
             h3.basic__block-title Результаты экзаменов
             a.basic__text(href= baseHref + "results") Результаты экзаменов размещены на отдельной странице.
