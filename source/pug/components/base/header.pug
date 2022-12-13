@@ -1,21 +1,21 @@
 -
   const headerLinks = [
-    {label: "Общая информация", href: "common"},
-    {label: "Объявления", href: "notice"},
-    {label: "Результаты экзаменов", href: "result"},
+    {label: "Общая информация", href: "common.html"},
+    {label: "Объявления", href: "notice.html"},
+    {label: "Результаты экзаменов", href: "result.html"},
     {label: "Контакты", href: "#contacts"}
   ]
 
   const langLinks = [
-    {label: 'en', href: "http://esti.msu.ru/en/"},
-    {label: '中文', href: "http://esti.msu.ru/pk/ch"}
+    {label: 'en', href: "/"},
+    {label: '中文', href: "ch.html"}
   ]
 
 mixin header()
   header.header
     .container.header__container
       .header__logo
-        a.header__logo-link(href= baseHref aria-label="Страница приёмной комиссии" title="На страницу приёмной комиссии")
+        a.header__logo-link(href= "/" aria-label="Страница приёмной комиссии" title="На страницу приёмной комиссии")
           img.header__logo-img(width="80" height="50" src= baseSrc + "img/logo.svg" alt="Логотип факультета")
       .header__nav
         each link in headerLinks
